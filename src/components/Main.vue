@@ -5,18 +5,8 @@
     <div class="main">
       <ad-map></ad-map>
       <manage-list></manage-list>
+      <page></page>
     </div>
-    <h1 v-bind:title="msg">{{msg}}</h1>
-    <h2>{{message}}</h2>
-    <input v-model="message">
-    <h2>Essential Links</h2>
-    <p v-if="seen">现在你看到我了1</p>
-    <ol>
-      <li v-for="todo in todos">
-        {{ todo.text }}
-      </li>
-    </ol>
-    <button v-on:click="reverseMessage">逆转消息</button>
   </div>
 </template>
 
@@ -25,6 +15,7 @@
 import ToolBar from './Top.vue'
 import AdMap from './AdMap.vue'
 import ManageList from './ManageList.vue'
+import Page from './Page.vue'
 export default {
   name: 'hello',
   data () {
@@ -42,7 +33,8 @@ export default {
   components: {
     ToolBar,
     AdMap,
-    ManageList
+    ManageList,
+    Page
   },
   methods: {
     reverseMessage: function () {
