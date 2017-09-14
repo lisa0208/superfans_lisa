@@ -22,9 +22,9 @@
 
 <script>
 
-import ToolBar from './Top.vue'
-import AdMap from './AdMap.vue'
-import ManageList from './ManageList.vue'
+//import ToolBar from './Top.vue'
+//import AdMap from './AdMap.vue'
+//import ManageList from './ManageList.vue'
 export default {
   name: 'hello',
   data () {
@@ -40,9 +40,9 @@ export default {
     }
   },
   components: {
-    ToolBar,
-    AdMap,
-    ManageList
+    //ToolBar,
+    //AdMap,
+    //ManageList
   },
   methods: {
     reverseMessage: function () {

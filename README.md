@@ -1,4 +1,4 @@
-# superfans-liusha
+# superfans_liusha
 
 > A Vue.js project
 
