@@ -51,7 +51,7 @@
         </tr>
       </tbody>
     </table>
-    <Popup v-show="popupShow" @close="popupShow = false"></Popup>
+    <Popup v-show="popupShow" @close="popupShow = false" myMessage="absdsf"></Popup>
   </div>
 </template>
 <script>
@@ -87,7 +87,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      message: 'Hello Vue!',
+      myMessage: 'Hello Vue!',
       lists: '',
       popupShow: false
     }
@@ -95,6 +95,7 @@ export default {
   components: {
     Popup
   },
+  props: ['message'],
   mounted () {
     var aq = this
     fetch(url).then(function (response) {

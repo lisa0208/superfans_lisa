@@ -10,10 +10,12 @@
         <!--Created by liusha on 16/8/17.-->
         <div class="popupBody">
         <div class="stop-plan">
-            <div class="icon-warn"></div><span>移除操作需要先结束使用此包的计划,请先结束相关计划？</span>
+            <div class="icon-warn"></div>
+            <span>移除操作需要先结束使用此包的计划,请先结束相关计划？</span>
+            <h4>{{my-message}}</h4>
         </div>
         <div class="popup-footer">
-            <div node-type="confirm-cancel" class="btn" @click="$emit('close')">确认</div>
+            <div class="btn" @click="$emit('close')">确认</div>
         </div>
         </div></div>
             <div class="r-row comp-general-popover-foot"></div>
