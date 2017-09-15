@@ -16,6 +16,7 @@ import ToolBar from './Top.vue'
 import AdMap from './AdMap.vue'
 import ManageList from './ManageList.vue'
 import Page from './Page.vue'
+
 export default {
   name: 'hello',
   data () {

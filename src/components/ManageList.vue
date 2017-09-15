@@ -42,19 +42,21 @@
           <td node-type="abnormal" class="abnormal"><i node-type="abnormal-tips"></i><span>异常</span><em class="abnormal-tips-show"><i node-type="abnormal-tips"></i>覆盖人群数大于等于 1000 时才可投放</em></td>
           <td>------</td>
           <td class="operation"  v-if="item.status == 1">
-            <div node-type="toolDel" status="1" class="action">移除</div>
+            <div v-on:click="greet" status="1" class="action">移除</div>
           </td>
           <td class="operation" v-else-if="item.status == 2">
-            <div node-type="toolDel" status="2" class="action">移除</div>
-            <div node-type="toolExtend" class="action">扩展</div>
+            <div v-on:click="greet" status="2" class="action">移除</div>
+            <div v-on:click="greet" class="action">扩展</div>
           </td>
         </tr>
       </tbody>
     </table>
+    <Popup></Popup>
   </div>
 </template>
 <script>
 var url = '/aj/tool_aud/search.json'
+import Popup from './Popup.vue'
 
 /**
 var data = {
@@ -89,6 +91,9 @@ export default {
       lists: ''
     }
   },
+  components: {
+    Popup
+  },
   mounted () {
     var aq = this
     fetch(url).then(function (response) {
@@ -98,6 +103,11 @@ export default {
     }).catch(function (e) {
       console.log('Oops, error')
     })
+  },
+  methods: {
+    greet: function (event) {
+      alert(11)
+    }
   }
 }
 </script>
