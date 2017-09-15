@@ -51,11 +51,7 @@
         </tr>
       </tbody>
     </table>
-<<<<<<< HEAD
     <Popup v-show="popupShow" @close="popupShow = false"></Popup>
-=======
-    <Popup v-show="popupShown" @close="popupShown = false"></Popup>
->>>>>>> 116c10d8dd6b392b38b55b7e98c8ed43129b65ec
   </div>
 </template>
 <script>
@@ -93,11 +89,7 @@ export default {
     return {
       message: 'Hello Vue!',
       lists: '',
-<<<<<<< HEAD
       popupShow: false
-=======
-      popupShown: false
->>>>>>> 116c10d8dd6b392b38b55b7e98c8ed43129b65ec
     }
   },
   components: {
@@ -115,11 +107,7 @@ export default {
   },
   methods: {
     greet: function (event) {
-<<<<<<< HEAD
       this.popupShow = true
-=======
-      this.popupShown = true
->>>>>>> 116c10d8dd6b392b38b55b7e98c8ed43129b65ec
     }
   }
 }
