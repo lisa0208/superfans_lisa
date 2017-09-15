@@ -51,7 +51,7 @@
         </tr>
       </tbody>
     </table>
-    <Popup></Popup>
+    <Popup v-show="popupShow" @close="popupShow = false"></Popup>
   </div>
 </template>
 <script>
@@ -88,7 +88,8 @@ export default {
   data () {
     return {
       message: 'Hello Vue!',
-      lists: ''
+      lists: '',
+      popupShow: false
     }
   },
   components: {
@@ -106,7 +107,7 @@ export default {
   },
   methods: {
     greet: function (event) {
-      alert(11)
+      this.popupShow = true
     }
   }
 }
