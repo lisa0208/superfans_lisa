@@ -3,7 +3,7 @@
         <div style="position: fixed; height: 100%; background-color: rgba(0, 0, 0, 0.2); display: block;" class="comp-general-popover-bg">
         <div style="width: 448px; height: 245px;" class="r-container-fluid comp-general-popover-body">
             <div style="display:block" class="r-row comp-general-popover-head">提示
-            <div class="comp-general-popover-close">X</div>
+            <div class="comp-general-popover-close" @click="$emit('close')">X</div>
             </div>
             <div class="r-row comp-general-popover-loading"></div>
             <div class="r-row comp-general-popover-content">
@@ -12,7 +12,14 @@
         <div class="stop-plan">
             <div class="icon-warn"></div>
             <span>移除操作需要先结束使用此包的计划,请先结束相关计划？</span>
-            <h4>{{my-message}}</h4>
+            <h4>{{myMessage}}</h4>
+
+            <div id="example-2">
+                <simple-counter></simple-counter>
+                <simple-counter></simple-counter>
+                <simple-counter></simple-counter>
+            </div>
+
         </div>
         <div class="popup-footer">
             <div class="btn" @click="$emit('close')">确认</div>
@@ -24,7 +31,17 @@
     </div>
 </template>
 <script>
-
+import SimpleCounter from './simpleCounter.vue'
+export default {
+  data () {
+    return {
+      myMessage: 'Hello Vue!'
+    }
+  },
+  components: {
+    SimpleCounter
+  }
+}
 </script>
 <style>
 .comp-general-popover-bg {
